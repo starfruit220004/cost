@@ -6,22 +6,20 @@ import "./index.css";
 
 import CostingTable from "./CostingTable.jsx";
 import Stocks from "./Stocks.jsx";
-import Sales from "./Sales.jsx"; // make sure to import Sales
+import Sales from "./Sales.jsx"; 
 
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<CostingTable />} /> {/* default */}
+        <Route path="/" element={<CostingTable />} />
         <Route path="/costing" element={<CostingTable />} />
         <Route path="/stocks" element={<Stocks />} />
-        <Route path="/sales" element={<Sales />} /> {/* add this route */}
+        <Route path="/sales" element={<Sales />} /> 
       </Routes>
     </Router>
   );
 }
-
-// Only call createRoot once
 const container = document.getElementById("root");
 const root = createRoot(container);
 
